@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<overlay id="transformurl" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript" src="chrome://transformurl/content/transformurl.js"/>
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="transform-url" type="menu" label="Transform My URL" width="100">
+      <menupopup>
+        <menuitem label="my dev port" oncommand="transformurl_executeTransform()" />
+        <menuitem label="my dev port 2" />
+        <menuitem label="staging env" />
+        <menuitem label="production" />
+      </menupopup>
+    </toolbarbutton>
+  </toolbarpalette>
+</overlay>
