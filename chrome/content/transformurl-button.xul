@@ -4,11 +4,15 @@
   <script type="application/x-javascript" src="chrome://transformurl/content/transformurl.js"/>
   <toolbarpalette id="BrowserToolbarPalette">
     <toolbarbutton id="transform-url" type="menu" label="Transform My URL" width="100">
-      <menupopup>
-        <menuitem label="my dev port" oncommand="transformurl_executeTransform('[\\w]+\\.livejournal\\.com',  'raccaldin36.livejournal.com')" />
-        <menuitem label="my dev port 2" />
-        <menuitem label="staging env" />
-        <menuitem label="production" />
+      <menupopup datasources="chrome://transformurl/content/transforms.xml" ref="*" querytype="xml">
+        <template>
+          <query expr="transform">
+            <assign var="?command" expr="concat('transformurl_executeTransform(', @from, ', ', @dest, ');')" />
+          </query>
+          <action>
+            <menuitem uri="?" label="?label" oncommand="?command" />
+          </action>
+        </template>
       </menupopup>
     </toolbarbutton>
   </toolbarpalette>
