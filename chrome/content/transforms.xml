@@ -1,4 +1,4 @@
 <transforms>
-  <transform label="Bobbo's Dev" from="'[\\w-]+\\.example\\.com(:[0-9]+)?'" dest="'bobbo.example.com:3000'" />
-  <transform label="Bubba's Production" from="'[\\w-]+\\.example\\.com(:[0-9]+)?'" dest="'bubba.example.com'" />
+  <transform label="Bobbo's Dev" from="'[\\w-]+\\.example\\.[\\w-]+(:[0-9]+)?'" dest="'bobbo.example.local:3000'" />
+  <transform label="Bubba's Production" from="'[\\w-]+\\.example\\.[\\w-]+(:[0-9]+)?'" dest="'bubba.example.com'" />
 </transforms>
