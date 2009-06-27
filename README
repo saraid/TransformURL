@@ -1,0 +1,40 @@
+This extension is made so that you can make transformations on your current URL
+using a regular expression. It was designed with internal corporate networks in
+mind, so it's of limited usage for the general Firefox user.
+
+In order to use it, pull the source and modify chrome/content/transforms.xml.
+It looks like this at the moment:
+
+<transforms>
+  <transform label="Bobbo's Dev"
+             from="'[\\w-]+\\.example\\.[\\w-]+(:[0-9]+)?'"
+             dest="'bobbo.example.local:3000'" />
+  <transform label="Bubba's Production"
+             from="'[\\w-]+\\.example\\.[\\w-]+(:[0-9]+)?'"
+             dest="'bubba.example.com'" />
+</transforms>
+
+The imagined situation is a developer named Bobbo who has set up the corporate
+network to throw people who go to bobbo.example.local at his own server. Since
+it's running Rails in development, it's on port 3000. At the same time, the
+production environment is running on Bubba's subdomain, on port 80. Now say
+a bug has been spotted in production at the URL:
+
+http://bubba.example.com/catalog/page/3?view=thumbnails&filter=sunsets
+
+In order to view this same page in his development environment, Bobbo would be
+required to change two parts of the hostname and add a port number. Not that
+difficult, but let's throw into the mix a dozen developers who have decided to
+run their servers on random port numbers. Add to that several different
+staging environments and you have a mild headache.
+
+TransformURL is a simple tool to remove this pain. It should be reasonably
+obvious how to configure the XML file. Once you've done this, you will need to
+ZIP the directory (using the Send to Compressed Folder utility works fine) and
+rename it to an XPI file, and then serve that. Details of how to do this are
+found here:
+
+https://developer.mozilla.org/en/Building_an_Extension#Package
+
+TODO:
+A way to modify your settings without rebuilding the XPI every time. =P
