@@ -1,2 +1,2 @@
-content     sample    chrome/content/
-overlay chrome://browser/content/browser.xul chrome://sample/content/sample.xul
+content     transformurl     chrome/content/
+overlay chrome://browser/content/browser.xul chrome://transformurl/content/transformurl-button.xul

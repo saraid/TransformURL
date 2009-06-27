@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<overlay id="transformurl" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbaritem id="transform-url">
+      <button type="menu" label="TransformURL">
+        <menupopup>
+          <menuitem label="my dev port" />
+          <menuitem label="my dev port 2" />
+          <menuitem label="staging env" />
+          <menuitem label="production" />
+        </menupopup>
+      </button>
+    </toolbaritem>
+  </toolbarpalette>
+</overlay>
