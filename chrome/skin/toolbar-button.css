@@ -1,0 +1,9 @@
+#transform-url
+{
+    list-style-image: url("chrome://transformurl/skin/large.png");
+}
+
+toolbar[iconsize="small"] #transform-url
+{
+    list-style-image: url("chrome://transformurl/skin/small.png");
+}

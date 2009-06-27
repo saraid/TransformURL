@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
+<?xml-stylesheet href="chrome://transformurl/skin/toolbar-button.css" type="text/css"?>
+
 <overlay id="transformurl" 
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script type="application/x-javascript" src="chrome://transformurl/content/transformurl.js"/>
   <toolbarpalette id="BrowserToolbarPalette">
-    <toolbarbutton id="transform-url" type="menu" label="Transform My URL" width="100">
+    <toolbarbutton id="transform-url" type="menu" label="Transform My URL" class="chromeclass-toolbar-additional toolbarbutton-1" tooltiptext="Transform my URL" orient="horizontal">
       <menupopup datasources="chrome://transformurl/content/transforms.xml" ref="*" querytype="xml">
         <template>
           <query expr="transform">
