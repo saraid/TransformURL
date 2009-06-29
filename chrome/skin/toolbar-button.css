@@ -1,9 +1,9 @@
 #transform-url
 {
-    list-style-image: url("chrome://transformurl/skin/large.png");
+    list-style-image: url("chrome://transformurl/skin/letters-large.png");
 }
 
 toolbar[iconsize="small"] #transform-url
 {
-    list-style-image: url("chrome://transformurl/skin/small.png");
+    list-style-image: url("chrome://transformurl/skin/letters-small.png");
 }
